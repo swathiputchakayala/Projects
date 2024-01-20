@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./MusicPlayer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+  <title>Music Player</title>
+</head>
+<body>
+  <div class="music-player">
+    <input type="file" id="fileInput" accept="audio/*" multiple>
+    <audio id="audio" controls></audio>
+    <!-- Replace the text content of buttons with icons -->
+<div class="controls">
+  <!-- Replace the text content of the play/pause button with an icon -->
+<button id="playPause" onclick="togglePlayPause()">
+  <i id="playPauseIcon" class="fas fa-play"></i>
+</button>
+
+  <button id="next">
+    <i class="fas fa-forward"></i>
+  </button>
+  <button id="loopSingle" onclick="toggleLoop('single')">
+    <i class="fas fa-toggle-on"></i> Single
+  </button>
+  <button id="loopLinear" onclick="toggleLoop('linear')">
+    <i class="fas fa-list"></i> All
+  </button>
+  <button id="loopRandom" onclick="toggleLoop('random')">
+    <i class="fas fa-random"></i> Shuffle
+  </button>
+</div>
+
+      
+    </>
+    <div class="song-info">
+      <h3>Now Playing:</h3>
+      <p id="currentSong">No song selected</p>
+      <h3>Song List:</h3>
+      <div class="song-list-container">
+        <ul id="songList"></ul>
+      </div>
+    </div>
+  </div>
+  <script src="./MusicPlayer.js"></script>
+</body>
+</html>
